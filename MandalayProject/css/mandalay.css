@@ -1,0 +1,83 @@
+a {
+    font-size: 18px;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.text-blue {
+    color: blue;
+    font-weight: normal;
+}
+
+.name {
+    font-size: 30px;
+}
+
+.heading {
+    color: blue;
+    text-align: center;
+}
+
+.heading img {
+    vertical-align: middle;
+}
+
+/* history */
+.history img {
+    width: 250px;
+    height: 230px;
+    margin: 30px 15px 0px;
+}
+
+/* hotel in mandlay */
+.hotel_logo {
+    width: 140px;
+    vertical-align: middle;
+}
+
+ul {
+    margin-bottom: 80px;
+}
+
+/* famous place*/
+#famous_place {
+    margin: 0 15px;
+}
+
+#famous_place td strong {
+    font-size: 19px;
+}
+
+#famous_place .left_img {
+    width: 220px;
+    height: 220px;
+    margin-right: 15px;
+}
+
+/* other place */
+#other_place {
+    margin: 0 15px;
+}
+
+#other_place tr td {
+    width: 25%;
+    padding: 0 10px;
+    text-align: justify;
+    vertical-align: top;
+}
+
+#other_place td strong {
+    font-size: 19px;
+}
+
+.other-img {
+    width: 240px;
+    height: 240px;
+}
+
+.mid-img {
+    text-align: center;
+}

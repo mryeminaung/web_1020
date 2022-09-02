@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Buttons</title>
+        <style>
+            h1 {
+                text-transform: uppercase;
+            }
+            button {
+                color: white;
+                padding: 10px 15px;
+                background-color: black;
+                border: 3px solid black;
+                border-radius: 10px;
+            }
+            #redBtn {
+                border-color: red;
+            }
+            #blueBtn {
+                border-color: blue;
+            }
+            #greenBtn {
+                border-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome from html+css+javascript</h1>
+        <h2 id="demo"></h2>
+        <p>I am testing the button on javascript</p>
+
+        <button onclick="redColor()" id="redBtn">RED</button>
+        <button onclick="blueColor()" id="blueBtn">BLUE</button>
+        <button onclick="greenColor()" id="greenBtn">GREEN</button>
+
+        <script>
+            let text = document.getElementById("demo");
+            function redColor() {
+                text.innerHTML = "You CLICK RED BUTTON";
+                text.style.color = "red";
+            }
+            function blueColor() {
+                text.innerHTML = "You CLICK BLUE BUTTON";
+                text.style.color = "blue";
+            }
+            function greenColor() {
+                text.innerHTML = "You CLICK GREEN BUTTON";
+                text.style.color = "green";
+            }
+        </script>
+    </body>
+</html>

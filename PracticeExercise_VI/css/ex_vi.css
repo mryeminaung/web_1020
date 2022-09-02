@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(155, 220, 155);
+    font-family: serif;
+}
+
+a.store {
+    color: grey;
+}
+
+ul li {
+    font-size: 20px;
+}
+
+p {
+    font-size: 19px;
+}
+
+.bg-red {
+    color: white;
+    background-color: red;
+}
+
+.bg-blue {
+    color: black;
+    background-color: blue;
+}
+
+.text-blue {
+    color: blue;
+}
+
+.climbing_device {
+    width: 200px;
+    height: 180px;
+}

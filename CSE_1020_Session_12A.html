@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSE 1020 Session 12A</title>
+    </head>
+    <body>
+        <form autocomplete="off">
+            Enter a number: <input type="text" id="num" />
+            <br>
+            <button type="button" onclick="display1()">e<sup>x</sup></button>
+            <input type="button" onclick="display2()" value="squareroot" />
+            <input type="button" onclick="display3()" value="ceil" />
+            <input type="button" onclick="display4()" value="round" />
+            <input type="button" onclick="display5()" value="floor" />
+            <button type="button" onclick="display6()">
+                x<sup><small>2</small></sup>
+            </button>
+            <input type="reset" value="Clear" />
+        </form>
+        <p>Display the result: <span id="result"></span></p>
+
+        <script>
+            let num = document.getElementById("num");
+            function display1() {
+                document.getElementById("result").innerHTML = Math.pow(Math.E, num.value);
+            }
+            function display2() {
+                document.getElementById("result").innerHTML = Math.sqrt(num.value);
+            }
+            function display3() {
+                document.getElementById("result").innerHTML = Math.ceil(num.value);
+            }
+            function display4() {
+                document.getElementById("result").innerHTML = Math.round(num.value);
+            }
+            function display5() {
+                document.getElementById("result").innerHTML = Math.floor(num.value);
+            }
+            function display6() {
+                document.getElementById("result").innerHTML = Math.pow(num.value, 2);
+            }
+        </script>
+    </body>
+</html>

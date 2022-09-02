@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculate Grade</title>
+        <style>
+            form input[type=number], form input[type=text] {
+                width: 50px;
+            }
+            table td{
+                padding: 5px 8px 5px 0; 
+            }
+        </style>
+    </head>
+    <body>
+        <h1>All Subjects Grade Calculator</h1>
+        <form>
+            <table>
+                <tr>
+                    <td>CSE 1030</td>
+                    <td>Programming II</td>
+                    <td>
+                        <input type="number" id="mark1" min="0" max="100"
+                            onkeyup="calculateGrade(this)" onchange="calculateGrade(this)"> /
+                        <input type="number" value="100" readonly>
+                    </td>
+                    <td>
+                        <label for="grade1">Grade: </label>
+                        <input type="text" name="grade1" id="grade1"
+                            readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CSE 1020</td>
+                    <td>Foundation of Web Programming II</td>
+                    <td>
+                        <input type="number" id="mark2" min="0" max="100"
+                            onkeyup="calculateGrade(this)" onchange="calculateGrade(this)"> /
+                        <input type="number" value="100" readonly>
+                    </td>
+                    <td>
+                        <label for="grade2">Grade: </label>
+                        <input type="text" name="grade2" id="grade2"
+                            readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>HSS C011</td>
+                    <td>Myanmar Language & Culture</td>
+                    <td>
+                        <input type="number" id="mark3" min="0" max="100"
+                            onkeyup="calculateGrade(this)" onchange="calculateGrade(this)"> /
+                        <input type="number" value="100" readonly>
+                    </td>
+                    <td>
+                        <label for="grade3">Grade: </label>
+                        <input type="text" name="grade3" id="grade3"
+                            readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>LANG 1020</td>
+                    <td>English II</td>
+                    <td>
+                        <input type="number" id="mark4" min="0" max="100"
+                            onkeyup="calculateGrade(this)" onchange="calculateGrade(this)"> /
+                        <input type="text" value="100" readonly>
+                    </td>
+                    <td>
+                        <label for="grade4">Grade: </label>
+                        <input type="text" name="grade4" id="grade4"
+                            readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MATH 1020</td>
+                    <td>Mathematics II</td>
+                    <td>
+                        <input type="number" id="mark5" min="0" max="100"
+                            onkeyup="calculateGrade(this)" onchange="calculateGrade(this)"> /
+                        <input type="number" value="100" readonly>
+                    </td>
+                    <td>
+                        <label for="grade5">Grade: </label>
+                        <input type="text" name="grade5" id="grade5"
+                            readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>PHYS 1020</td>
+                    <td>Physics</td>
+                    <td>
+                        <input type="number" id="mark6" min="0" max="100"
+                            onkeyup="calculateGrade(this)" onchange="calculateGrade(this)"> /
+                        <input type="number" value="100" readonly>
+                    </td>
+                    <td>
+                        <label for="grade6">Grade: </label>
+                        <input type="text" name="grade6" id="grade6"
+                            readonly>
+                    </td>
+                </tr>
+            </table>
+            <input type="reset" value="Clear Data">
+        </form>
+
+        <script>
+            const calculateGrade = (e) => {
+                // console.log(e.value, typeof parseInt(e.value));
+
+                let mark = parseInt(e.value);
+                let id = e.id;
+                let grade;
+
+                if(isNaN(mark)) {
+                    grade = '';
+                } else if(mark >= 85 && mark <= 100)
+                    grade = 'A';
+                else if(mark >= 80 && mark < 85)
+                    grade = 'A-';
+                else if(mark >= 70 && mark < 80)
+                    grade = 'B+';
+                else if(mark >= 65 && mark < 70)
+                    grade = 'B';
+                else if(mark >= 55 && mark < 65)
+                    grade = 'B-';
+                else if(mark >= 50 && mark < 55)
+                    grade = 'C+';
+                else if(mark >= 45 && mark < 50)
+                    grade = 'C';
+                else if(mark >= 40 && mark < 45)
+                    grade = 'D';
+                else
+                    grade = 'F';
+
+                if(id == "mark1") {
+                    document.getElementById("grade1").value = grade;
+                } else if(id == "mark2") {
+                    document.getElementById("grade2").value = grade;
+                } else if(id == "mark3") {
+                    document.getElementById("grade3").value = grade;
+                } else if(id == "mark4") {
+                    document.getElementById("grade4").value = grade;
+                } else if(id == "mark5") {
+                    document.getElementById("grade5").value = grade;
+                } else if(id == "mark6") {
+                    document.getElementById("grade6").value = grade;
+                } 
+            }
+        </script>
+    </body>
+</html>

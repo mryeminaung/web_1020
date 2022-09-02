@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Temperature Converter</title>
+        <style>
+            body {
+                background-color: brown;
+            }
+
+            #converter {
+                width: 400px;
+                margin: 50px auto;
+                border-radius: 10px;
+            }
+
+            .header {
+                margin: 0;
+                color: white;
+                padding: 15px 5px;
+                text-align: center;
+                background-color: black;
+                text-transform: uppercase;
+                border-radius: 10px 10px 0 0;
+            }
+
+            .temp {
+                padding: 20px;
+                background-color: white;
+                border-radius: 0 0 10px 10px;
+            }
+
+            form > input[type=number] {
+                width: 100px;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="converter">
+            <h3 class="header">celsius to fahrenheit converter</h3>
+            <div class="temp">
+                <form autocomplete="off">
+                    <label for="celsius">
+                        Enter temperature in Celsius :
+                    </label>
+                    <input type="number" name="celsius" id="celsius">
+                    <br>
+                    <label for="fahrenheit">
+                        Temperature in Fahrenheit :
+                    </label>
+                    <input type="number" name="fahrenheit" id="fahrenheit"
+                        readonly>
+                    <br>
+                    <input type="button" value="Convert"
+                        onclick="convertToFahrenheit()">
+                    <input type="reset" value="Clear All Data">
+                </form>
+            </div>
+        </div>
+
+        <script>
+            function convertToFahrenheit() {
+                let celsius = document.getElementById("celsius").value;
+                let fahrenheit = document.getElementById("fahrenheit");
+                if(celsius == 0) {
+                    alert("Please enter any numbers");
+                }
+                else {
+                    let temp;
+                    temp = (celsius * (9/5)) + 32;
+                    fahrenheit.value = temp;
+                }
+            }
+        </script>
+    </body>
+</html>

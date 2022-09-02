@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Have a good day!!!</title>
+        <style>
+            body {
+                background-color: rgb(28, 28, 151);
+                color: white;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #fullDate, #showTime {
+                margin: 10px auto;
+                border: 2px dashed white;
+                width: 150px;
+                padding: 20px 30px;
+            }
+            #showTime {
+                font-size: 20px;
+                border-width: 5px;
+                padding: 20px 100px;
+            }
+            h1 {
+                text-shadow: 3px 3px 5px red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Have a Good Day!!</h1>
+        <p id="fullDate">Hello</p>
+        <p id="showTime">
+            <span id="hour">00</span> :
+            <span id="minute">00</span>
+            <span id="dayNight"></span>
+        </p>
+
+        <script>
+            let d = new Date();
+            document.getElementById("fullDate").innerHTML = d.toDateString();
+
+            function timer() {
+                let date = new Date();
+                let h = date.getHours();
+                let m = date.getMinutes();
+
+                if(h > 11) 
+                    dayNight.innerHTML = " PM";
+                else
+                    dayNight.innerHTML = " AM";
+
+                h = (h >= 12 && h <= 23)? (h - 12): h;
+                document.getElementById("hour").innerHTML = h < 10? "0" + h: h;
+                document.getElementById("minute").innerHTML = m < 10? "0" + m : m;
+            }
+            setInterval(timer, 1000);
+        </script>
+    </body>
+</html>

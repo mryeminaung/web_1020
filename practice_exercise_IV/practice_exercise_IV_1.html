@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" href="/html_logo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Form</title>
+    </head>
+    <body>
+        <table width="310" align="center">
+            <form action="/yeminaung.html" method="post" autocomplete="off">
+                <tr>
+                    <td colspan="2" align="center">
+                        <h3>Login Form</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="username">Username : </label></td>
+                    <td><input type="text" name="username" id="username"></td>
+                </tr>
+                <tr>
+                    <td><label for="pwd">Password : </label></td>
+                    <td><input type="password" name="pwd" id="pwd"></td>
+                </tr>
+                <tr>
+                    <td><label for="empCity">City of Employment : </label></td>
+                    <td><input type="text" name="empCity" id="empCity"></td>
+                </tr>
+                <tr>
+                    <td><label for="web_server">Web Server : </label></td>
+                    <td>
+                        <select name="web_server" id="web_server">
+                            <option value="-1" selected disabled>---Choose a Server---</option>
+                            <option value="human_resourses">Human Resourses</option>
+                            <option value="development">Development</option>
+                            <option value="accounting">Accounting</option>
+                            <option value="sales">Sales</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="role">Please specify your role : </label></td>
+                    <td>
+                        <input type="radio" name="role" id="admin" value="Admin">
+                        <label for="admin">Admin</label><br>
+                        <input type="radio" name="role" id="engineer" value="Engineer">
+                        <label for="engineer">Engineer</label><br>
+                        <input type="radio" name="role" id="manager" value="Manager">
+                        <label for="manager">Manager</label><br>
+                        <input type="radio" name="role" id="guest" value="Guest">
+                        <label for="guest">Guest</label><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="sign_on">Single Sign-on to the following : </label></td>
+                    <td>
+                        <input type="checkbox" name="sign_on" id="mail" value="Mail">
+                        <label for="mail">Mail</label><br>
+                        <input type="checkbox" name="sign_on" id="payroll" value="Payroll">
+                        <label for="payroll">Payroll</label><br>
+                        <input type="checkbox" name="sign_on" id="self_service" value="Self Service">
+                        <label for="self_service">Self-service</label><br><br>
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2">
+                        <input type="submit" value="Login">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </form>
+        </table>
+    </body>
+</html>

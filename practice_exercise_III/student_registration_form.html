@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" href="/html_logo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Registration Form</title>
+    </head>
+    <body>
+        <table cellpadding="2">
+            <form action="" method="post" autocomplete="off">
+                <h3>Student Registration Form</h3>
+                <label for="name">Name </label>
+                <input type="text" name="name" id="name" size="30">
+                <br><br>
+                <label for="father_name">Father Name </label>
+                <input type="text" name="father_name" id="father_name" size="30">
+                <br><br>
+                <fieldset>
+                    <legend>Sex</legend>
+                    <input type="radio" name="sex" id="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="sex" id="female">
+                    <label for="female">Female</label>
+                </fieldset><br>
+                <label for="birthDate">DOB </label>
+                <input type="date" name="birthDate" id="birthDate">
+                <br><br>
+                <label for="phone_no">Mobile No </label>
+                <input type="tel" name="phone_no" id="phone_no" size="30">
+                <br><br>
+                <label for="postal_address">Postal Address </label>
+                <input type="text" name="postal_address"
+                            id="postal_address" size="30">
+                <br><br>
+                <label for="personal_address">Personal Address </label>
+                <input type="text" name="personal_address"
+                            id="personal_address" size="30">
+                <br><br>
+                <label for="city">City </label>
+                <select name="city" id="city">
+                    <option value="-1" selected disabled>select...</option>
+                    <option value="Sagaing">SAGAING</option>
+                    <option value="Mandalay">MANDALAY</option>
+                    <option value="Taunggyi">TAUNGGYI</option>
+                    <option value="Kalaw">KALAW</option>
+                    <option value="Naypyitaw">NAYPYITAW</option>
+                </select>
+                <br><br>
+                <label for="district">District </label>   
+                <select name="district" id="district">
+                    <option value="-1" selected disabled>select...</option>
+                    <option value="Sagaing">SAGAING</option>
+                    <option value="Mandalay">MANDALAY</option>
+                    <option value="Magway">MAGWAY</option>
+                    <option value="Naypyitaw">NAYPYITAW</option>
+                </select>
+                <br><br>
+                <label for="state">State </label> 
+                <select name="state" id="state">
+                    <option value="-1" selected disabled>select...</option>
+                    <option value="Shan">SHAN</option>
+                    <option value="Kachin">KACHIN</option>
+                    <option value="Chinn">CHINN</option>
+                    <option value="Kayar">KAYAR</option>
+                    <option value="Mon">MON</option>
+                </select>
+                <br><br>
+                <label for="course">Course </label>
+                <input list="course">
+                <datalist name="course" id="course">
+                    <option value="C Programming"></option>
+                    <option value="Web Programming"></option>
+                    <option value="Maths"></option>
+                    <option value="Physics"></option>
+                </datalist>
+                <br><br>
+                <label for="pin_code">PinCode </label> 
+                <input type="text" name="pin_code" id="pin_code" size="30">
+                <br><br>
+                <label for="email">EmailId </label>
+                <input type="email" name="email" id="email" size="30">
+                <br><br>
+                <input type="reset" value="Reset">
+                &nbsp;
+                <input type="submit" value="Submit Form">
+            </form>
+        </table>
+    </body>
+</html>

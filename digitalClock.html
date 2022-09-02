@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Digital Clock</title>
+        <style>
+            body {
+                text-align: center;
+            }
+            #clock {
+                font-size: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Digital Clock</h1>
+        <p id="clock">
+            <span id="hour">00</span> :
+            <span id="minute">00</span> :
+            <span id="second">00</span>
+            <span id="dayNight"></span>
+        </p>
+
+        <script>
+            function timer() {
+                let date = new Date();
+                let h = date.getHours();
+                let m = date.getMinutes();
+                let s = date.getSeconds();
+
+                let hour = document.getElementById("hour");
+                let minute = document.getElementById("minute");
+                let second = document.getElementById("second");
+                let dayNight = document.getElementById("dayNight");
+
+                hour.innerHTML = h < 10? "0" + h: h;
+                minute.innerHTML = m < 10? "0" + m : m;
+                second.innerHTML = s < 10? "0" + s : s;
+
+                if(h > 11) {
+                    dayNight.innerHTML = " PM";
+                } else {
+                    dayNight.innerHTML = " AM";
+                }
+            }
+            setInterval(timer, 1000);
+        </script>
+    </body>
+</html>

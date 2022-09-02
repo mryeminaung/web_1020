@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" href="/html_logo.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Session 5B Practice Exercise IV 2</title>
+    </head>
+    <body>
+        <form action="" method="post" width="500">
+            
+            <fieldset>
+                <legend>Your details</legend>
+                <ol>
+                    <li>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" required placeholder="Enter your name"><br>
+                    </li>
+                    <li>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required placeholder="example@miit.edu.mm"><br>
+                    </li>
+                    <li>
+                        <label for="phone">Phone</label>
+                        <input type="text" name="phone" id="phone" required placeholder="Eg +959000000000"><br><br>
+                    </li>
+                </ol>
+            </fieldset>
+
+            <fieldset>
+                <legend>Delivery Address</legend>
+                <ol>
+                    <li>
+                        <label for="address">Address</label>
+                        <textarea name="address" id="address" cols="20" rows="5" required></textarea><br>
+                    </li>
+                    <li>
+                        <label for="country">Country</label>
+                        <input type="text" name="country" id="country" required><br>
+                    </li>
+                </ol>
+            </fieldset>
+
+            <fieldset>
+                <legend>Payment details</legend>
+                <ol>
+                    <li>
+                        <fieldset>
+                            <legend>Payment type</legend>
+                            <ol>
+                                <li>
+                                    <input type="radio" name="card" id="payment1" value="KPay">
+                                    <label for="payment1">KPay</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="card" id="payment2" value="CBPay">
+                                    <label for="payment2">CBPay</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="card" id="payment3" value="Cash">
+                                    <label for="payment3">Cash</label>
+                                </li>
+                            </ol>
+                        </fieldset>
+                    </li>
+                    <li>
+                        <label for="security_code">Security Code</label>
+                        <input type="number" name="security_code" id="security_code" required><br>
+                    </li>
+                    <li>
+                        <label for="name_on_card">Name on card</label>
+                        <input type="text" name="name_on_card" id="name_on_card" required placeholder="Exact name as on the card"><br>
+                    </li>
+                </ol> 
+            </fieldset>
+            <fieldset>
+                <input type="submit" value="Bye it!">
+            </fieldset>
+        </form>
+    </body>
+</html>
